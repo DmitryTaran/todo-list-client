@@ -1,0 +1,17 @@
+.title-wrapper{
+    display: flex;
+    padding: 0 20px;
+}
+
+.title-pointer{
+    display: flex;
+    padding: 0 20px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+.auth-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

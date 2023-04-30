@@ -1,0 +1,49 @@
+.todoItem {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 13px;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.25s;
+    cursor: pointer;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    min-width: 500px;
+}
+
+.todoItem:hover {
+    transform: scale(103%);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.checkBox {
+    width: 30px;
+    height: 30px;
+}
+
+.activePanel {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.todoText{
+    max-width: 500px;
+}
+
+.draggable{
+    background-color: #666666;
+}
