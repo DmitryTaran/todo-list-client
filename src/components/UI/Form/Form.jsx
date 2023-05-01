@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Form.module.css'
+import classes from './form.module.css'
 
 const Form = ({children, ...props}) => {
     return (
