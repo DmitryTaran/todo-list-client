@@ -18,8 +18,7 @@ const BoardItem = ({board, ...props}) => {
     const [updateBoardModalActive, setUpdateBoardModalActive] = useState(false)
 
     const [deleteBoard, isDeleteBoardLoading] = useFetching(async () => {
-        await destroyBoard(board.id).then(data => {
-            console.log(data)
+        await destroyBoard(board.id).then(() => {
             boardStore.deleteTodoBoard(board.id)
         })
     })

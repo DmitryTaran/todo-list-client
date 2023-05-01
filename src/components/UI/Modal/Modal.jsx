@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Modal.module.css'
+import classes from './modal.module.css'
 
 const Modal = ({active, setActive, children}) => {
 

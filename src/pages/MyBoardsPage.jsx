@@ -7,9 +7,10 @@ import Loading from "../components/UI/Loading/Loading.jsx";
 
 const MyBoardsPage = () => {
 
-    const {userStore, boardStore} = useContext(Context)
+    const {userStore, boardStore, todoListStore} = useContext(Context)
 
     const [fetchBoards, isFetchBoardsLoading] = useFetching(async () => {
+        todoListStore.setTodoList([])
         await getBoards(userStore.id).then(data => {
             boardStore.setTodoBoards(data)
         })
