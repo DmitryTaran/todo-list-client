@@ -1,10 +1,12 @@
 import React, {useContext} from 'react';
 import cl from './header.module.css'
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import {Context} from "../../../App.jsx";
 const Header = () => {
 
     const {userStore, boardStore, todoListStore} = useContext(Context)
+
+    const navigate = useNavigate()
 
     const logOut = () => {
         localStorage.clear()
@@ -12,6 +14,7 @@ const Header = () => {
         userStore.setUser({})
         boardStore.setTodoBoards([])
         todoListStore.setTodoList([])
+        navigate('/')
     }
 
     return (
