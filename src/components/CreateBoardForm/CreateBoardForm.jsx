@@ -13,8 +13,8 @@ const CreateBoardForm = ({setActive}) => {
 
     const [title, setTitle] = useState('')
 
-    const [addBoard, isAddBoardLoading] = useFetching(async() => {
-        await createBoard(userStore.id, title ? title : 'Новая доска').then(data => {
+    const [addBoard, isAddBoardLoading] = useFetching(async () => {
+        await createBoard(userStore.id, title === '' ? title : 'Новая доска').then(data => {
             boardStore.addTodoBoard(data)
             setActive(false)
         })
