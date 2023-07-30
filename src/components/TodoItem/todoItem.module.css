@@ -1,30 +1,34 @@
 .todoItem {
-    display: flex;
     background-color: white;
     border-radius: 8px;
-    padding: 10px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    transition: 0.25s;
+    padding: 7px;
     margin-bottom: 13px;
+    cursor: pointer;
+    max-width: 700px;
+}
+
+.todoTitle {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: 0.25s;
-    cursor: pointer;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
-    min-width: 500px;
 }
 
 .todoItem:hover {
-    transform: scale(103%);
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-.checkBox {
-    width: 30px;
-    height: 30px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4);
 }
 
 .activePanel {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
 .button {
@@ -40,10 +44,18 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.todoText{
-    max-width: 500px;
+.todoDescription {
+    max-height: 0;
+    transition: all 0.6s;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0);
+    margin-left: 10px;
 }
 
-.draggable{
-    background-color: #666666;
+.todoDescriptionActive {
+    max-height: 100px;
+    height: auto;
+    color: #777;
+    margin-left: 10px;
+    transition: all 0.6s;
 }

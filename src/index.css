@@ -9,9 +9,6 @@
     line-height: 1.5;
     font-weight: 400;
     color-scheme: light;
-    /*color: rgba(255, 255, 255, 0.87);*/
-    /*background-color: #242424;*/
-    /*background-color: rgba(255, 255, 255, 0.9);*/
     background-color: rgb(229, 229, 229);
     color: #242424;
 
@@ -20,14 +17,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-}
-
-a {
-
-}
-
-a:hover {
-
 }
 
 body {

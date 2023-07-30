@@ -6,13 +6,13 @@ export const getTodos = async (boardId) => {
     return data
 }
 
-export const createTodo = async (text, description, boardId) => {
-    const {data} = await $authHost.post('api/todo', {text, description, boardId})
+export const createTodo = async (text, description, boardId, deadline) => {
+    const {data} = await $authHost.post('api/todo', {text, description, boardId, deadline})
     return data
 }
 
 export const destroyTodo = async (id) => {
-    const {data} = await $authHost.delete('api/todo', {params:{id}})
+    const {data} = await $authHost.delete('api/todo', {params: {id}})
     return data
 }
 

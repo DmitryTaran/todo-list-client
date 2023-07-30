@@ -15,3 +15,9 @@
     align-items: center;
 }
 
+.todo-list-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

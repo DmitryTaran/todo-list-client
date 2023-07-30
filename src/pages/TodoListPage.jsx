@@ -24,12 +24,12 @@ const TodoListPage = observer(() => {
     }, [])
 
     return (
-        <div>
+        <div className="todo-list-page">
             <Loading isLoading={isFetchTodosLoading}/>
             <div className='title-pointer'>
                 <h1>{boardStore.getCurrentTitle(id)}</h1>
             </div>
-            <TodoList/>
+                <TodoList/>
         </div>
     );
 });

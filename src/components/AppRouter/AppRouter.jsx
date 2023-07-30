@@ -8,11 +8,9 @@ import AuthPage from "../../pages/AuthPage.jsx";
 import {Context} from "../../App.jsx";
 import {useFetching} from "../../hooks/useFetching.js";
 import {check} from "../../http/userAPI.js";
-import cl from './appRouter.module.css'
 import Loading from "../UI/Loading/Loading.jsx";
 import {observer} from "mobx-react-lite";
 import {getBoards} from "../../http/boardAPI.js";
-import {FaWineGlassAlt} from "react-icons/all.js";
 
 const AppRouter = observer(() => {
 

@@ -1,11 +1,15 @@
 .checkbox{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 5px;
     border: 1px solid #00782D;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.failed{
+    border: 1px solid #780000;
 }
 
 .hidden{

@@ -1,15 +1,24 @@
-
-
-.title{
+.title {
     align-self: flex-start;
     margin-bottom: 10px;
 }
 
-.inputBlock{
+.buttons {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+
+.inputBlock {
     width: 100%;
 }
 
-.text{
+.text {
     display: flex;
     flex-wrap: wrap;
+}
+
+.button {
+    margin: 5px;
 }
