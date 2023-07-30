@@ -3,8 +3,6 @@ import {makeAutoObservable} from "mobx";
 export default class TodoListStore{
     constructor() {
         this._todoList = []
-
-
         makeAutoObservable(this)
     }
 
@@ -32,6 +30,12 @@ export default class TodoListStore{
     updateTodo(id, todo){
         const index = this._todoList.findIndex(todo => parseInt(todo.id) === parseInt(id))
         this.todoList[index] = todo
+    }
+
+    swapTodosOrder(todo1, todo2){
+        const order = todo1.order
+        todo1.order = todo2.order
+        todo2.order = order
     }
 
     get todoList(){

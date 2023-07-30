@@ -41,7 +41,6 @@ const AddTodoForm = ({setActive}) => {
             />
             <h2 className={cl.title}>Дедлайн</h2>
             <DatePicker value={deadline} onChange={(e) => setDeadline(e.target.value)}/>
-
             <div className={cl.buttons}>
                 <button className={cl.button} onClick={() => setActive(false)}>Отмена</button>
                 <button className={cl.button} onClick={addTodo}>Добавить</button>

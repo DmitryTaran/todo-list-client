@@ -6,6 +6,7 @@ import {observer} from "mobx-react-lite";
 import {useFetching} from "../hooks/useFetching.js";
 import Loading from "../components/UI/Loading/Loading.jsx";
 import {getTodos} from "../http/todoAPI.js";
+import Accordion from "../components/UI/Accordion/Accordion.jsx";
 
 const TodoListPage = observer(() => {
 
@@ -29,7 +30,7 @@ const TodoListPage = observer(() => {
             <div className='title-pointer'>
                 <h1>{boardStore.getCurrentTitle(id)}</h1>
             </div>
-                <TodoList/>
+            <TodoList/>
         </div>
     );
 });

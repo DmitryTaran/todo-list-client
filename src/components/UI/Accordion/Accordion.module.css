@@ -1,0 +1,30 @@
+.accordionHead {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    transition: 0.25s;
+    padding: 7px;
+    margin-bottom: 13px;
+    cursor: pointer;
+    max-width: 700px;
+}
+
+.accordionHead:hover {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+.accordionBody {
+    max-height: 0;
+    transition: all 0.6s;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0);
+    margin-left: 10px;
+}
+
+.accordionBodyActive {
+    max-height: 100px;
+    height: auto;
+    color: #777;
+    margin-left: 10px;
+    transition: all 0.6s;
+}

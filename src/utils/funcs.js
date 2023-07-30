@@ -4,5 +4,5 @@ export const getDate = (date) => {
 }
 
 export const compareDate = (date) => {
-    return new Date(date).getTime() <= Date.now()
+    return new Date(date).getTime() < Date.now()
 }
