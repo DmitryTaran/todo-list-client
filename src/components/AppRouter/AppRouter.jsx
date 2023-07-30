@@ -11,6 +11,7 @@ import {check} from "../../http/userAPI.js";
 import Loading from "../UI/Loading/Loading.jsx";
 import {observer} from "mobx-react-lite";
 import {getBoards} from "../../http/boardAPI.js";
+import NotFoundPage from "../../pages/NotFoundPage.jsx";
 
 const AppRouter = observer(() => {
 
@@ -37,21 +38,20 @@ const AppRouter = observer(() => {
     return (
         <>
             <Loading isLoading={isAuthCheckLoading}/>
-            <Routes>
-                <Route path={MAIN_ROUTE} element={<Layout/>}>
-                    {
-                        userStore.isAuth ?
-                            <Route>
-                                <Route index element={<MyBoardsPage/>}/>
-                                <Route path={BOARD_ROUTE + ":id"} element={<TodoListPage/>}/>
-                            </Route>
-                            :
-                            <Route index element={<AuthPage/>}/>
-
-
-                    }
-                </Route>
-            </Routes>
+            {userStore.isAuth ?
+                <Routes>
+                    <Route path={MAIN_ROUTE} element={<Layout/>}>
+                        <Route index element={<MyBoardsPage/>}/>
+                        <Route path={BOARD_ROUTE + ":id"} element={<TodoListPage/>}/>
+                        <Route path='*' element={<NotFoundPage/>}/>
+                    </Route>
+                </Routes> :
+                <Routes>
+                    <Route path={MAIN_ROUTE} element={<Layout/>}>
+                        <Route index element={<AuthPage/>}/>
+                        <Route path='*' element={<NotFoundPage/>}/>
+                    </Route>
+                </Routes>}
         </>
 
     );
