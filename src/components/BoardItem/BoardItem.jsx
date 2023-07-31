@@ -29,7 +29,7 @@ const BoardItem = ({board, ...props}) => {
     return (
         <>
             <Loading isLoading={isDeleteBoardLoading}/>
-            <div className={cl.boardItem}
+            <div style={{backgroundImage: `url("background${board.id % 4}.jpg")`}} className={cl.boardItem}
                  onMouseEnter={() => setIsShowDeleteButton(true)}
                  onMouseLeave={() => setIsShowDeleteButton(false)}
                  {...props}
